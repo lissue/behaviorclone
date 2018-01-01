@@ -15,8 +15,8 @@
 [image3]: ./correction-1.jpg "Recovery Image"
 [image4]: ./correction-2.jpg "Recovery Image"
 [image5]: ./correction-3.jpg "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image6]: ./center_1.jpg "Normal Image"
+[image7]: ./center_1_flipped.jpg "Flipped Image"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
