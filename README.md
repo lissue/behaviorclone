@@ -14,7 +14,7 @@
 [image2]: ./center_1.jpg "Grayscaling"
 [image3]: ./correction-1.jpg "Recovery Image"
 [image4]: ./correction-2.jpg "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image5]: ./correction-3.jpg "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
@@ -70,19 +70,19 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 and 5x5 filters sizes and depths between 24 and 64 (model.py lines 18-24)
+My model consists of a convolution neural network with 3x3 and 5x5 filters sizes and depths between 24 and 64 (model.py [lines 69-80](model.py#L69-L80))
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized and cropped in the model using a Keras lambda layer (code line 18).
+The model includes RELU layers to introduce nonlinearity ([lines 70-72](model.py#L70-L72)), and the data is normalized and cropped in the model using a Keras lambda layer ([code line 67](model.py#L67)).
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 21).
+The model contains dropout layers in order to reduce overfitting (model.py [lines 69](model.py#L69)[&77](model.py#L77)).
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting ([line 22](model.py#L22)). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer, so the learning rate was not tuned manually (model.py [line 82](model.py#L82)).
 
 #### 4. Appropriate training data
 
@@ -108,7 +108,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture (model.py [lines 69-80](model.py#L69-L80)) consisted of a convolution neural network with the following layers and layer sizes ...
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
