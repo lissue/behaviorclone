@@ -104,7 +104,7 @@ To combat the overfitting, I modified the model so that I included dropouts.
 
 The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track, such as the left turn leading to the bridge. To improve the driving behavior in these cases, I added more of the manual driving at the locations to the training and validation datasets.
 
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road. The video can be found [here](./run1.mp4).
 
 #### 2. Final Model Architecture
 
