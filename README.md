@@ -17,6 +17,7 @@
 [image5]: ./correction-3.jpg "Recovery Image"
 [image6]: ./center_1.jpg "Normal Image"
 [image7]: ./center_1_flipped.jpg "Flipped Image"
+[image8]: ./mse.png "MSE"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -137,4 +138,8 @@ After the collection process, I had 17504 data points. I then preprocessed this 
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set.
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by the monotonic reduction in MSE. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 4 as evidenced by the monotonic reduction in MSE:
+
+![alt text][image8]
+
+I used an adam optimizer so that manually training the learning rate wasn't necessary.

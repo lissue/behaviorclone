@@ -4,8 +4,10 @@ import numpy as np
 import pandas as pd
 import sklearn
 from sklearn.model_selection import train_test_split
+from keras import regularizers
+from keras.callbacks import ModelCheckpoint
 from keras.models import Sequential, Model
-from keras.layers import Flatten, Dense, Lambda, Conv2D, MaxPooling2D, Cropping2D, Dropout
+from keras.layers import Flatten, Dense, Lambda, Conv2D, MaxPooling2D, Cropping2D, Dropout, SpatialDropout2D
 import matplotlib.pyplot as plt
 
 lines = []
@@ -66,7 +68,7 @@ validation_generator = generator(validation_samples, batch_size)
 model = Sequential()
 model.add(Lambda(lambda x: x/255.0-0.5, input_shape=(160,320,3)))
 model.add(Cropping2D(cropping=((50,20), (0,0)), input_shape=(160,320,3)))
-model.add(Dropout(0.5))
+model.add(SpatialDropout2D(0.5))
 model.add(Conv2D(24,(5,5),strides=(2,2),activation='relu'))
 model.add(Conv2D(36,(5,5),strides=(2,2),activation='relu'))
 model.add(Conv2D(48,(5,5),strides=(2,2),activation='relu'))
@@ -74,8 +76,8 @@ model.add(Conv2D(64,(3,3),activation='relu'))
 model.add(Conv2D(64,(3,3),activation='relu'))
 model.add(Flatten())
 model.add(Dense(100))
-model.add(Dropout(0.5))
-model.add(Dense(50))
+model.add(Dense(50,kernel_regularizer=regularizers.l2(0.01),
+          activity_regularizer=regularizers.l1(0.01)))
 model.add(Dense(10))
 model.add(Dense(1))
 
